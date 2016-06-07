@@ -2,6 +2,8 @@ package com.virtualpairprogrammers.avalon.services;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.virtualpairprogrammers.avalon.data.BookDao;
 import com.virtualpairprogrammers.avalon.data.BookNotFoundException;
 import com.virtualpairprogrammers.avalon.domain.Book;
@@ -9,6 +11,8 @@ import com.virtualpairprogrammers.avalon.domain.Book;
 /**
  * This is the production implementation - it will be calling a "real" database.
  */
+
+@Transactional
 public class BookServiceProductionImpl implements BookService {
 
 	private BookDao dao;

@@ -14,7 +14,7 @@ public class Client {
 
 		BookService bookService = container.getBean("bookService",BookService.class);
 
-	    bookService.registerNewBook(new Book("2384928389223", "War and Peace", "Leo Tolstoy", 10.99));
+	    bookService.registerNewBook(new Book("2384928389224", "War and Peace", "Leo Tolstoy", 10.99));
 
 		List<Book> allBooks = bookService.getEntireCatalogue();
 		for (Book next : allBooks) {
@@ -22,7 +22,8 @@ public class Client {
 	    }
 
 		try {
-			Book foundBook = bookService.getBookByIsbn("23928389223");
+			Book foundBook = bookService.getBookByIsbn("2384928389224");
+			System.out.println(" Book found price is "+foundBook.getPrice());
 		} catch (BookNotFoundException e) {
 			System.out.println("Sorry, that book doesn't exist");
 		}
