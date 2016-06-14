@@ -14,5 +14,5 @@ public interface BookService {
 
 	public List<Book> getEntireCatalogue();
 
-	public void registerNewBook(Book newBook);
+	public void registerNewBook(Book newBook) throws BookNotFoundException;
 }

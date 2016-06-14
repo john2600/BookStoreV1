@@ -47,9 +47,10 @@ public class BookServiceProductionImpl implements BookService {
 	}
 
 	@Override
-	public void registerNewBook(Book newBook) {
-
+	public void registerNewBook(Book newBook) throws BookNotFoundException {
 		dao.create(newBook);
+		
+	
 		
 		
 
