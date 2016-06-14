@@ -50,6 +50,8 @@ public class BookServiceProductionImpl implements BookService {
 	public void registerNewBook(Book newBook) {
 
 		dao.create(newBook);
+		
+		
 
 	}
 
